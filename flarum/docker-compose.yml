@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+
+  mysql:
+    image: mysql:5.7.13
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=flarum
+
+  flarum:
+    build: .
+    ports:
+      - '8080:80'
+    links:
+      - mysql

@@ -1,2 +1,2 @@
-vault: sleep 10 && vault server -config=config.hcl
+vault: sleep 10 && vault server -config=vault.hcl
 backend: consul agent -server -bootstrap-expect 1 -data-dir /tmp/consul

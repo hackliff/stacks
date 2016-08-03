@@ -34,7 +34,7 @@ install_consul() {
   curl -Lk \
     -o ${tmp_dest} \
     "${PKG_URL}/consul/${pkg_version}/${package}"
-  unzip -o -d ${BIN_PATH} ${tmp_dest}
+  unzip -d ${BIN_DIR} ${tmp_dest}
 
   # clean up
   rm -rf ${tmp_dest}

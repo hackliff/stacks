@@ -7,7 +7,7 @@
 ```Bash
 $ docker run -d --name kong-database \
   -p 5432:5432 \
-  -e "POSTGRES_USER=kong" /
+  -e "POSTGRES_USER=kong" \
   -e "POSTGRES_DB=kong" \
   postgres:9.4
 
@@ -17,7 +17,7 @@ $ docker run -d --name kong \
   -e "KONG_PG_HOST=kong-database" \
   -p 8000:8000 \
   -p 8443:8443 \
-  -p 8001:8001 /
+  -p 8001:8001 \
   -p 7946:7946 \
   -p 7946:7946/udp \
   kong:0.9.2
@@ -59,4 +59,12 @@ $ curl -i -X GET \
   --url http://localhost:8000 \
   --header "Host: mockbin.com" \
   --header "apikey: ENTER_KEY_HERE"
+```
+
+
+### Plugin development
+
+```Bash
+$ docker exec -it $(basename ${PWD})_kong_1 bash
+[kong] $ cd /usr/local/kong 
 ```

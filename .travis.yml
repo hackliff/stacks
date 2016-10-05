@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - 6
+
+env:
+  global:
+    - GIT_NAME: hackliff
+    - GIT_EMAIL: xavier.bruhiere@gmail.com
+    - GITHUB_REPO: hivetech/stacks
+    - GIT_SOURCE: _docpress
+
+script:
+  - make doc
+
+after_success:
+- if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm install git-update-ghpages && ./node_modules/.bin/git-update-ghpages -e; fi

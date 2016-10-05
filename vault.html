@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=d358ee59">
+    <script src="assets/script.js?t=42463e55"></script>
+    <title>Vault - Stacks</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="index.html">Stacks</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title  link-flarum" href="flarum.html">Flarum</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title  link-osquery" href="osquery.html">Osquery</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title -active link-vault" href="vault.html">Vault</a>
+              <ul class="headings heading-list">
+                <li class="heading-item -depth-2"><a class="hlink link-getting-started" href="#getting-started">Getting started</a>
+                </li>
+                <li class="heading-item -depth-2"><a class="hlink link-api-clients" href="#api-clients">API Clients</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-vault">
+        <div class="header-nav">
+          <div class="right">
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="vault"><a href="https://www.vaultproject.io">Vault</a></h1>
+<h2 id="getting-started">Getting started</h2>
+<pre><code class="lang-Bash">$ <span class="pl-c"># install it on Mac OSX</span>
+$ ./bootstrap.sh
+
+$ vault server -dev
+$ vault status
+Sealed: <span class="pl-c1">false</span>
+Key Shares: 1
+Key Threshold: 1
+Unseal Progress: 0
+
+High-Availability Enabled: <span class="pl-c1">false</span>
+$ curl <span class="pl-s">&quot;<span class="hljs-variable">$VAULT_ADDR</span>/v1/sys/health&quot;</span>
+{<span class="pl-s">&quot;initialized&quot;</span>:<span class="pl-c1">true</span>,<span class="pl-s">&quot;sealed&quot;</span>:<span class="pl-c1">false</span>,<span class="pl-s">&quot;standby&quot;</span>:<span class="pl-c1">false</span>,<span class="pl-s">&quot;server_time_utc&quot;</span>:1470148733}
+
+$ write secret data ! `secret` prefix is mandatory
+$ vault write secret/hello value=world
+Success! Data written to: secret/hello
+$ vault <span class="pl-c1">read</span> secret/hello
+Key                     Value
+---                     -----
+refresh_interval        2592000
+value                   world
+$ vault delete secret/hello
+Success! Deleted <span class="pl-s">&apos;secret/hello&apos;</span> <span class="pl-k">if</span> it existed.
+
+</code></pre>
+<h2 id="api-clients">API Clients</h2>
+<ul>
+<li><a href="https://godoc.org/github.com/hashicorp/vault/api">Go</a></li>
+<li><a href="https://github.com/kr1sp1n/node-vault">Node</a></li>
+<li><a href="https://github.com/ianunruh/hvac">Python</a></li>
+</ul>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="osquery.html"><span class="title">Osquery</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

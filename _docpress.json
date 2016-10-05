@@ -1,0 +1,134 @@
+{
+  "toc": {
+    "sections": [
+      {
+        "title": "Stacks",
+        "source": "readme.md",
+        "url": "index.html",
+        "slug": "index"
+      },
+      {
+        "title": "Flarum",
+        "source": "docs/flarum.md",
+        "url": "flarum.html",
+        "slug": "flarum",
+        "headings": [
+          {
+            "title": "Setup",
+            "depth": 2,
+            "id": "setup"
+          }
+        ]
+      },
+      {
+        "title": "Osquery",
+        "source": "docs/osquery.md",
+        "url": "osquery.html",
+        "slug": "osquery",
+        "headings": [
+          {
+            "title": "[Installation](https://osquery.readthedocs.io/en/stable/installation/install-linux/)",
+            "depth": 2,
+            "id": "installation(https:osquery.readthedocs.ioenstableinstallationinstall-linux)"
+          },
+          {
+            "title": "[Interesting usages](https://osquery.readthedocs.io/en/stable/introduction/sql/)",
+            "depth": 2,
+            "id": "interesting-usages(https:osquery.readthedocs.ioenstableintroductionsql)"
+          },
+          {
+            "title": "Resources",
+            "depth": 2,
+            "id": "resources"
+          }
+        ]
+      },
+      {
+        "title": "Vault",
+        "source": "docs/vault.md",
+        "url": "vault.html",
+        "slug": "vault",
+        "headings": [
+          {
+            "title": "Getting started",
+            "depth": 2,
+            "id": "getting-started"
+          },
+          {
+            "title": "API Clients",
+            "depth": 2,
+            "id": "api-clients"
+          }
+        ]
+      }
+    ]
+  },
+  "index": {
+    "index.html": {
+      "source": "readme.md",
+      "title": "Stacks",
+      "pageTitle": "Stacks",
+      "slug": "index"
+    },
+    "flarum.html": {
+      "source": "docs/flarum.md",
+      "title": "Flarum - Stacks",
+      "pageTitle": "Flarum",
+      "slug": "flarum",
+      "headings": [
+        {
+          "title": "Setup",
+          "depth": 2,
+          "id": "setup"
+        }
+      ]
+    },
+    "osquery.html": {
+      "source": "docs/osquery.md",
+      "title": "Osquery - Stacks",
+      "pageTitle": "Osquery",
+      "slug": "osquery",
+      "headings": [
+        {
+          "title": "[Installation](https://osquery.readthedocs.io/en/stable/installation/install-linux/)",
+          "depth": 2,
+          "id": "installation(https:osquery.readthedocs.ioenstableinstallationinstall-linux)"
+        },
+        {
+          "title": "[Interesting usages](https://osquery.readthedocs.io/en/stable/introduction/sql/)",
+          "depth": 2,
+          "id": "interesting-usages(https:osquery.readthedocs.ioenstableintroductionsql)"
+        },
+        {
+          "title": "Resources",
+          "depth": 2,
+          "id": "resources"
+        }
+      ]
+    },
+    "vault.html": {
+      "source": "docs/vault.md",
+      "title": "Vault - Stacks",
+      "pageTitle": "Vault",
+      "slug": "vault",
+      "headings": [
+        {
+          "title": "Getting started",
+          "depth": 2,
+          "id": "getting-started"
+        },
+        {
+          "title": "API Clients",
+          "depth": 2,
+          "id": "api-clients"
+        }
+      ]
+    }
+  },
+  "sources": {
+    "readme.md": "index.html",
+    "docs/flarum.md": "flarum.html",
+    "docs/osquery.md": "osquery.html",
+    "docs/vault.md": "vault.html"
+  }
+}

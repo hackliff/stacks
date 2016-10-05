@@ -7,7 +7,7 @@ doc: reset_state copy_content
 .PHONY: reset_state
 reset_state:
 	command -v docpress > /dev/null || npm install docpress
-	test -d ./docs && rm -rf ./docs
+	test -d ./docs && rm -rf ./docs || true
 
 .PHONY: copy_content
 copy_content:

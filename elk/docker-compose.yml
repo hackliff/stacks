@@ -2,6 +2,8 @@ version: '2'
 
 services:
 
+  ## Monitor logs
+
   elasticsearch:
     image: elasticsearch:2.3.3
     ports:
@@ -22,4 +24,34 @@ services:
       - .:/app
     links:
       - elasticsearch
-    command: filebeat.sh -c /app/filebeat.yml
+    command: filebeat.sh -e -c /app/filebeat.yml
+
+  ## Monitor metrics
+
+  influx:
+    image: 'influxdb:1.0.2-alpine'
+    # TODO challenge environment variables and ports
+    ports:
+      - '8083:8083'
+      - '8086:8086'
+      - '4444:4444/udp'
+    expose:
+      - 8090
+      - 8099
+      - 4444
+    environment:
+      - 'INFLUXDB_PRE_CREATE_DB=metrics'
+      - 'INFLUXDB_FORCE_HOSTNAME=auto'
+      - 'INFLUXDB_UDP_ENABLED=true'
+      - 'INFLUXDB_UDP_DATABASE=metrics'
+      - 'INFLUXDB_UDP_BIND_ADDRESS=:4444'
+
+  kapacitor:
+    build: ./kapacitor
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./kapacitor:/app
+    links:
+      - influx
+    command: sleep

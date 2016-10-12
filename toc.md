@@ -25,6 +25,7 @@
 
 - Databases
   - [Redis](./databases/redis/readme.md)
+  - [Aerospike](./aerospike.md)
 
 - Notes
   - [Osquery](./osquery.md)

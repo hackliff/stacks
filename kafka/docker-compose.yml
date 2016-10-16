@@ -1,0 +1,40 @@
+version: '2'
+
+services:
+
+  zookeeper:
+    image: "jplock/zookeeper:3.4.8"
+    ports:
+      - "2181:2181"
+
+  mysql:
+    image: mysql:5.7.13
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
+    ports:
+      - "3306:3306"
+
+  druid:
+    build: ./druid
+    links:
+      - mysql
+
+  kafka:
+    build: ./kafka
+    ports:
+      - "9092:9092"
+      - "7203:7203"
+    #volumes:
+      #- "./data:/opt/kafka/data"
+      #- "./logs:/opt/kafka/logs"
+    links:
+      - zookeeper
+
+  lab:
+    image: python:3.4
+    links:
+      - kafka
+      - druid
+      - mysql
+      - zookeeper
+    command: python

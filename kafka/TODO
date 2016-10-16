@@ -1,0 +1,12 @@
+# vi: ft=vimwiki
+
+== Todo - In order of priority ==
+
+* [ ] Use an external zookeeper with docker-compose
+* [ ] Customize kafka conf to use it
+* [ ] Setup a cluster
+* [ ] Try libraries
+* [ ] Learn more about the topic
+* [ ] Fully parametrize configuration (like kafka.logs.dir)
+
+== Notes ==

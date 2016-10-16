@@ -13,7 +13,13 @@ reset_state:
 copy_content:
 	mkdir ./docs
 	cp ./toc.md docs/README.md
+	cp ./writings.md ./docs
 	cp ./notes/* ./docs/
 	cp ./vault/readme.md ./docs/vault.md
 	cp ./flarum/readme.md ./docs/flarum.md
-#
+	cp ./electron/readme.md ./docs/electron.md
+	cp ./grpc/readme.md ./docs/grpc.md
+	cp ./kafka/readme.md ./docs/kafka.md
+	cp ./tensorflow/readme.md ./docs/tensorflow.md
+	cp ./rmarkdown/readme.md ./docs/rmarkdown.md
+

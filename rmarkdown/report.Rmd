@@ -1,0 +1,25 @@
+---
+title: "Sample Document"
+---
+
+# Example
+
+## Paragraph
+
+This is an **example**.
+
+- Item 1
+  - Item 2
+
+## Some Code
+
+
+With R Markdown, you can insert R code chunks including plots:
+
+```{r qplot, fig.width=4, fig.height=3, message=FALSE}
+# quick summary plot
+library(ggplot2)
+summary(cars)
+qplot(speed, dist, data=cars) + geom_smooth()
+```
+

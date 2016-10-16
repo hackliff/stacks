@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# vim: filetype=sh
+
+__print () {
+  local message="$1\n"
+  autoenv_printf "$(date +%H:%M:%S) [info] ${message}"
+}
+
+__reset () {
+  local init_filepath=${1:-${IPE_INIT_FILE_PATH}}
+
+  unset __PROJECT__
+  unset IPE_RUNTIME_VERSION
+  test -f ${init_filepath} && rm -f ${init_filepath}
+}
+
+main () {
+  __print "reseting project ${__PROJECT__} setup, bye!"
+  __reset
+}
+
+main $@

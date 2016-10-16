@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package stdlib;
+
+service StdLib {
+  // NOTE is it possible to only pass int32 or none ?
+  // normal synchronous function call
+  rpc SimpleSync (Foo) returns (Bar) {}
+
+  // TODO test the other 3 method types
+}
+
+message Foo {
+  string message = 1;
+}
+
+// NOTE why 1 and 2 ?
+message Bar {
+  int32 code = 1;
+  string message = 2;
+}

@@ -1,0 +1,6 @@
+.editorconfig
+.jshintrc
+.travis.yml
+.babelrc
+node_modules/
+test/

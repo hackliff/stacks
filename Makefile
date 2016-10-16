@@ -11,7 +11,7 @@ reset_state:
 
 .PHONY: copy_content
 copy_content:
-	mkdir ./docs
+	test -d docs || mkdir ./docs
 	cp ./toc.md docs/README.md
 	cp ./writings.md ./docs
 	cp ./notes/*.md ./docs/
@@ -34,4 +34,4 @@ copy_content:
 	cp ./dkron/readme.md ./docs/dkron.md
 	cp ./elm/readme.md ./docs/elm.md
 	cp ./graphql/readme.md ./docs/graphql.md
-#
+	cp ./jenkins/readme.md ./docs/jenkins.md

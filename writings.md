@@ -27,6 +27,19 @@
 
 - [React Dashboard](https://www.packtpub.com/books/content/react-dashboard-and-visualizing-data)
 
+- Reactive Python
+
+  - [Cross-language RPC conversation](https://www.packtpub.com/books/content/reactive-python-%E2%80%93-cross-language-rpc-conversation)
+
+  - [Async programming to the rescue - Part 1](https://www.packtpub.com/books/content/reactive-python-%E2%80%93-asynchronous-programming-rescue-part-1)
+
+  - [Async programming to the rescue - Part 2](https://www.packtpub.com/books/content/reactive-python-asynchronous-programming-rescue-part-2)
+
+
+---
+
+
+
 
 ## Resources
 

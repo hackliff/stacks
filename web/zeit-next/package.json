@@ -1,0 +1,21 @@
+{
+  "name": "zeit-stack",
+  "version": "0.1.0",
+  "description": "zeit.co stack testing and evaluation",
+  "main": "index.js",
+  "author": "hackliff",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "now"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "next": "^2.4.4",
+    "now": "^7.0.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}

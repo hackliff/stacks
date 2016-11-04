@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  # TODO populate DB
+  mysql:
+    image: mysql:5.7.13
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: airpal
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    volumes:
+      - './mysql-init:/docker-entrypoint-initdb.d'
+
+  presto:
+    image: presto
+    ports:
+      - '8080:8080'
+    links:
+      - mysql
+    command: '/opt/presto-server-0.145/bin/launcher run --verbose'
+
+  airpal:
+    image: airpal
+    ports:
+      - '8081:8081'
+    links:
+      - presto
+      - mysql
+    command: 'bash /opt/run.sh'

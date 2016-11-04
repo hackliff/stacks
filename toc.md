@@ -22,6 +22,7 @@
 - Data Science
   - [Tensorflow](./tensorflow.md)
   - [RMarkdown](./rmarkdown.md)
+  - [Airpal](./airpal.md)
 
 - Databases
   - [Redis](./databases/redis/readme.md)

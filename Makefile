@@ -31,3 +31,4 @@ copy_content:
 	cp ./dask/readme.md ./docs/dask.md
 	cp ./aerospike/readme.md ./docs/aerospike.md
 	cp ./airpal/readme.md ./docs/airpal.md
+	cp ./dkron/readme.md ./docs/dkron.md

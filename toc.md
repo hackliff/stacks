@@ -19,6 +19,9 @@
   - [Electron](./electron.md)
   - [Zeit](./zeit.md)
 
+- DevOps
+  - [Dkron](./drkon.md)
+
 - Data Science
   - [Tensorflow](./tensorflow.md)
   - [RMarkdown](./rmarkdown.md)

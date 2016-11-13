@@ -8,5 +8,5 @@ RUN /tmp/bootstrap-dkron.sh
 
 EXPOSE 8946 8080 6868
 
-ENTRYPOINT ["/op/local/dkron/dkron"]
+ENTRYPOINT ["/opt/local/dkron/dkron"]
 CMD ["--help"]

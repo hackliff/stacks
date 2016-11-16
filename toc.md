@@ -17,10 +17,14 @@
 
 - Web
   - [Electron](./electron.md)
+<<<<<<< HEAD
   - [Zeit](./zeit.md)
 
 - DevOps
   - [Dkron](./drkon.md)
+=======
+  - [Elm](./elm.md)
+>>>>>>> 7f052ab... initial readmes
 
 - Data Science
   - [Tensorflow](./tensorflow.md)

@@ -25,4 +25,6 @@ copy_content:
 	cp ./serverless/readme.md ./docs/serverless.md
 	cp ./serverless/fission/readme.md ./docs/fission.md
 	cp ./zeit/readme.md ./docs/zeit.md
+	cp ./serverless/readme.md ./docs/serverless.md
+	cp ./serverless/fission/readme.md ./docs/fission.md
 

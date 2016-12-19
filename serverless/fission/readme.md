@@ -34,11 +34,3 @@ $ chmod +x /usr/local/bin/fission
 $ fission function create --name hello --env nodejs --code hello.js
 $ fission route create --method GET --url /hello --function hello
 ```
-
-
-## TODO
-
-- fix controller container (`/filepath` doesn't exist)
-- integrate with Carina or Hyper.sh
-- write a beautiful abstraction
-- experiment on serverless cron

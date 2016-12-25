@@ -4,6 +4,8 @@
 
 - [Writings](./writings.md)
 
+- [Awesome](./awesome-lectures.md)
+
 - [Flarum](./flarum.md)
 - [Vault](./vault.md)
 - [GRPC](./grpc.md)

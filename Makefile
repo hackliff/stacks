@@ -14,7 +14,7 @@ copy_content:
 	mkdir ./docs
 	cp ./toc.md docs/README.md
 	cp ./writings.md ./docs
-	cp ./notes/* ./docs/
+	cp ./notes/*.md ./docs/
 	cp ./vault/readme.md ./docs/vault.md
 	cp ./flarum/readme.md ./docs/flarum.md
 	cp ./electron/readme.md ./docs/electron.md

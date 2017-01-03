@@ -1,15 +1,17 @@
 # [Kong](https://getkong.org)
 
-## Installation
+- [Official docker image](https://hub.docker.com/_/kong/)
+- [Official documentation](https://getkong.org/docs/)
+- [Lua Nginx module](https://github.com/openresty/lua-nginx-module)
 
-**TODO**: docker-compose
+## Installation
 
 ```Bash
 $ docker run -d --name kong-database \
   -p 5432:5432 \
   -e "POSTGRES_USER=kong" \
   -e "POSTGRES_DB=kong" \
-  postgres:9.4
+  postgres:9.6.1-alpine
 
 $ docker run -d --name kong \
   --link kong-database:kong-database \
@@ -20,7 +22,7 @@ $ docker run -d --name kong \
   -p 8001:8001 \
   -p 7946:7946 \
   -p 7946:7946/udp \
-  kong:0.9.2
+  kong:0.9.7
 
 $ curl http://127.0.0.1:8001 | python -m json.tool
 $ curl http://127.0.0.1:8001/status | python -m json.tool
@@ -29,7 +31,7 @@ $ curl http://127.0.0.1:8001/status | python -m json.tool
 ## Usage
 
 ```Bash
-$ # register upstreaml
+$ # register upstream
 $ curl -i -X POST \
   --url http://localhost:8001/apis/ \
   --data 'name=mockbin' \
@@ -68,3 +70,17 @@ $ curl -i -X GET \
 $ docker exec -it $(basename ${PWD})_kong_1 bash
 [kong] $ cd /usr/local/kong 
 ```
+
+---
+
+## Todo
+
+- Fix docker-comppose
+
+## Module Ideas
+
+- AB Test module
+- Traffic Replication
+- Feature Flags
+- Events forwarding / messaging / normalizer / enrichment
+- InfluxDB / Grafana monitoring

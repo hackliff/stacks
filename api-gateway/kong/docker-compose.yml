@@ -3,7 +3,7 @@ version: '2'
 services:
 
   kong-database:
-    image: 'postgres:9.4'
+    image: 'postgres:9.6.1-alpine'
     ports:
       - '5432:5432'
     environment:
@@ -11,7 +11,7 @@ services:
       - 'POSTGRES_DB=kong'
 
   kong:
-    image: 'kong:0.9.2'
+    image: 'kong:0.9.7'
     volumes:
       - ./replicate-plugin:/usr/local/kong/plugins/replicate-plugin
     environment:
@@ -24,4 +24,4 @@ services:
       - '7946:7946'
       - '7946:7946/udp'
     links:
-      - kong-database
+      - 'kong-database:kong-database'

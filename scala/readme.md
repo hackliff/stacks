@@ -17,6 +17,10 @@ $ scala HelloWorld
 Hello, World!
 ```
 
+```Bash
+$ cd finagle && sbt
+```
+
 
 ## Frameworks to try
 

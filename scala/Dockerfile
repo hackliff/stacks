@@ -1,6 +1,6 @@
 FROM openjdk:8
 
-ADD ./bootstrap.sh /opt/
+COPY ./bootstrap.sh /opt/
 RUN /opt/bootstrap.sh
 
 ENV SCALA_HOME /opt/scala

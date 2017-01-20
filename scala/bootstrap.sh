@@ -44,7 +44,7 @@ EOF
 
 install_extra_sbt() {
   curl -L \
-    -o ${SCALA_HOME}/sbt \
+    -o ${SCALA_HOME}/bin/sbt \
     https://raw.githubusercontent.com/paulp/sbt-extras/master/sbt
   chmod +x ${SCALA_HOME}/bin/sbt
 }

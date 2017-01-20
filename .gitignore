@@ -4,6 +4,7 @@ node_modules
 ## scala
 *.class
 *.log
+*.jar
 
 # sbt specific
 .cache

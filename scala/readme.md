@@ -36,10 +36,11 @@ Hello, World!
 
 - [Scala best practices](https://github.com/alexandru/scala-best-practices)
 
-- [Twitter's effective scala
-  guide](http://twitter.github.io/effectivescala/)
+- [Twitter's effective scala guide](http://twitter.github.io/effectivescala/)
 
 - [Awesome Scala](https://github.com/lauris/awesome-scala)
 
 - [Vim-scala](https://github.com/derekwyatt/vim-scala) - _My work on
   integration of Scala into Vim_
+
+- [Getting started gist](https://gist.github.com/djspiewak/cb72c41ac335a3a9b28b3307be04aa43)

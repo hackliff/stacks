@@ -1,6 +1,7 @@
 #! /usr/bin/env bash
 
 readonly INSTALL_PATH="/opt"
+readonly SCALA_HOME="${INSTALL_PATH}/scala"
 readonly SBT_URL="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt"
 
 install_scala() {
@@ -17,7 +18,15 @@ install_scala() {
   scala -version
 }
 
-install_sbt() {
+# http://www.lihaoyi.com/Ammonite/#Ammonite-REPL
+install_repl() {
+  curl -L \
+    -o ${SCALA_HOME}/bin/amm \
+    https://git.io/v1rPf
+  chmod +x ${SCALA_HOME}/bin/amm
+}
+
+install_old_sbt() {
   local sbt_version=${1:-"0.13.11"}
   wget -q \
     -O ${INSTALL_PATH}/scala/bin/sbt-launch.jar \
@@ -33,5 +42,13 @@ EOF
   chmod +x ${INSTALL_PATH}/scala/bin/sbt
 }
 
+install_extra_sbt() {
+  curl -L \
+    -o ${SCALA_HOME}/sbt \
+    https://raw.githubusercontent.com/paulp/sbt-extras/master/sbt
+  chmod +x ${SCALA_HOME}/bin/sbt
+}
+
 install_scala "2.11.8"
-install_sbt
+install_extra_sbt
+install_repl

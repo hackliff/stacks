@@ -9,6 +9,7 @@ object Server extends App {
         http.Response(req.version, http.Status.Ok)
       )
   }
+
   val server = Http.serve(":8080", service)
   Await.ready(server)
 }

@@ -1,19 +1,21 @@
 #! /usr/bin/env bash
 
-readonly INSTALL_PATH="/opt"
-readonly SCALA_HOME="${INSTALL_PATH}/scala"
+readonly INSTALL_PATH="/usr/local/opt"
 readonly SBT_URL="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt"
+
+export SCALA_HOME="${INSTALL_PATH}/scala"
 
 install_scala() {
   local scala_version=${1:-"2.9.3"}
 
   cd ${INSTALL_PATH}
 
+  # TODO only if not already downloaded (quite an heavy package)
   curl "http://www.scala-lang.org/files/archive/scala-${scala_version}.tgz" | tar xz
   ln -s "$PWD/scala-${scala_version}" "$PWD/scala"
 
-  export SCALA_HOME=$PWD/scala
-  export PATH=$PATH:$SCALA_HOME/bin
+  #export SCALA_HOME="$PWD/scala"
+  export PATH="$PATH:$SCALA_HOME/bin"
 
   scala -version
 }
@@ -49,6 +51,6 @@ install_extra_sbt() {
   chmod +x ${SCALA_HOME}/bin/sbt
 }
 
-install_scala "2.11.8"
+install_scala "2.12.4"
 install_extra_sbt
 install_repl

@@ -6,6 +6,7 @@
 - [Official getting started](https://www.elastic.co/webinars/getting-started-elasticsearch)
 - [Build a search engine with Node and elasticsearch](https://www.sitepoint.com/search-engine-node-elasticsearch/)
 - [Index your Gmail Inbox with Elasticsearch](https://github.com/oliver006/elasticsearch-gmail)
+- [Index & Search Hacker News using Elasticsearch and the HN API](https://github.com/oliver006/elasticsearch-hn)
 
 - [Official Docker image](https://store.docker.com/images/1090e442-627e-4bf2-b29a-555f57a64ecd?tab=description)
 - [Official Elasticsearch client library for Node.js and the browser](https://github.com/elastic/elasticsearch-js)
@@ -23,6 +24,8 @@ $ docker run --detached --name es \
   -p 9200:9200 -p 9300:9300 \
   elasticsearch:5.1.2-alpine -Des.node.name="TestNode"
 ```
+
+Once **elasticsearch** is ready, build Kibana and visit the dashboard at `localhost:5601`.
 
 ```Bash
 $ docker run -d --name kibana \

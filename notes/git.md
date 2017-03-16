@@ -5,6 +5,8 @@
 - [Mastering Git - Why Rebase is amazing](https://hackernoon.com/mastering-git-why-rebase-is-amazing-a954485b128a#.fbebliyzj)
 - [Oh Shit Git](http://ohshitgit.com/)
 - [How to write commit messages](https://chris.beams.io/posts/git-commit/)
+- [Git - the simple guide](http://rogerdudler.github.io/git-guide/) -
+  _just a simple guide for getting started with git. no deep shit ;)_
 
 ## Rebasing
 
@@ -20,6 +22,29 @@
 - `git rebase -i master`
 
 - Be super cautious with you co-workers and `git push origin feature --force-with-lease`
+
+
+## Useful Tips
+
+```Bash
+$ # reset file changes
+$ git checkout -- <filename>
+
+$ # built-in gui
+$ gitk
+
+$ # interactive add to index
+$ git add -i
+```
+
+## Logging
+
+```Bash
+$ # pretty printing
+$ git log --graph --oneline --decorate --all
+$ # only show files that changed
+$ git log --name-status --oneline
+```
 
 
 ## Git commit messages

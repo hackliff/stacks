@@ -11,7 +11,11 @@ import (
 	"github.com/nats-io/go-nats"
 )
 
-func repl() {
+func repl(nc *nats.Conn) {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Simple Scrapy Shell")
+	fmt.Println("---------------------")
+
 	for {
 		fmt.Print("-> ")
 		text, _ := reader.ReadString('\n')
@@ -44,10 +48,6 @@ func main() {
 		fmt.Printf("[ spider ] conf - %s\n", string(m.Data))
 		nc.Publish(m.Reply, []byte("localhost"))
 	})
-
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Println("Simple Scrapy Shell")
-	fmt.Println("---------------------")
 
 	repl(nc)
 

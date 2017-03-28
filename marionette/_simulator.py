@@ -8,7 +8,7 @@
 import asyncio
 
 from nats.aio.client import Client as Nats
-from nats.aio.errors import ErrConnectionClosed, ErrTimeout, ErrNoServers
+from nats.aio.errors import ErrTimeout
 
 
 def run(loop):

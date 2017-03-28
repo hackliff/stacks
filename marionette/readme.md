@@ -14,7 +14,7 @@ asyncio]().
 $ # TODO install without Go
 $ # what about https://github.com/nats-io/nats-streaming-server
 $ go get github.com/nats-io/gnatsd
-$ gnatsd
+$ gnatsd --debug
 ```
 
 ```Bash
@@ -33,3 +33,13 @@ $ mkvirtualenv \
 $ # then start the server/spider simulator
 $ python spider-simulator.py
 ```
+
+
+## Usage
+
+
+```Bash
+$ alias scrape='scrapy crawl --loglevel DEBUG -o - -t jl'
+$ scrape Basic -a url=http://google.com
+```
+

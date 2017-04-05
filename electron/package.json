@@ -3,14 +3,12 @@
   "private": true,
   "version": "0.1.1",
   "description": "learning to hack on electron",
-  "main": "app/main.js",
+  "main": "dist/main.js",
   "scripts": {
-    "start": "npm run build && electron app/main.js",
-    "build": "babel -d app/ src/ && cp src/*.html app/ ",
+    "start": "npm run build && NODE_ENV=development DEBUG='electron.*' electron dist/main.js",
+    "build": "babel -d dist/ app/ && cp app/*.html dist/",
     "test": "echo not implemented",
-    "lint": "(eslint src/**/*.js && jscs src/*.js) || true",
-    "tasks": "leasot --skip-unsupported --tags=NOTE ./src/*.js || true",
-    "health": "npm-check || true"
+    "lint": "eslint app/**/*.js || true"
   },
   "keywords": [
     "electron",
@@ -21,19 +19,17 @@
   "author": "hackliff",
   "license": "MIT",
   "devDependencies": {
-    "babel-eslint": "^6.0.5",
+    "babel-eslint": "^7.2.1",
     "babel-preset-react": "^6.5.0",
-    "electron-prebuilt": "^1.2.3",
-    "eslint": "^2.13.1",
-    "eslint-config-airbnb": "^9.0.1",
-    "eslint-plugin-import": "^1.8.1",
-    "eslint-plugin-jsx-a11y": "^1.5.3",
-    "eslint-plugin-react": "^5.2.2",
-    "jscs": "^3.0.4",
-    "leasot": "^3.2.2",
-    "npm-check": "^5.2.2"
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
   },
   "dependencies": {
+    "debug": "^2.6.3",
+    "electron": "^1.6.2",
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
   }

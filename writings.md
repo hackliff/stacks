@@ -35,6 +35,12 @@
 
   - [Async programming to the rescue - Part 2](https://www.packtpub.com/books/content/reactive-python-asynchronous-programming-rescue-part-2)
 
+- [How are container technologies changing programming languages](https://www.packtpub.com/books/content/how-are-container-technologies-changing-programming-languages) - _April 12th, 2017_
+
+- [How to Retain Your Team](https://www.packtpub.com/books/content/how-retain-your-team) - _April 12th, 2017_
+
+- [DevOps is not continuous delivery](https://www.packtpub.com/books/content/devops-not-continuous-delivery) - _April 12th, 2017_
+
 
 ---
 

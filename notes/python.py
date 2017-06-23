@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 # vim:fenc=utf-8
 
-"""Various cool stuff stolen from Kpler lib, for efficiency boosting."""
-
 ## Generators -----------------------------------------------------------------
 ## Original article: http://www.programiz.com/python-programming/generator
 
@@ -12,6 +10,10 @@ def lazy(my_list):
 
 
 ## MISC -----------------------------------------------------------------------
+
+# export your ipython history (to write a script after tinkering in the shell
+# for example). `-g` option would pull the entire history
+%history -f ./ipython.hist
 
 # Generate random ratios for, say, fake AB tests
 def random_ratio():

@@ -22,16 +22,15 @@ $ export FISSION_ROUTER=$(minikube ip):31314
 
 ```Bash
 $ curl http://fission.io/fission > /usr/local/bin/fission
+$ curl http://fission.io/mac/fission > fission && \
+  chmod +x fission && \
+  sudo mv fission /usr/local/bin/
 $ chmod +x /usr/local/bin/fission
 ```
 
 ## Usage
 
-
-
-## TODO
-
-- fix controller container (`/filepath` doesn't exist)
-- integrate with Carina or Hyper.sh
-- write a beautiful abstraction
-- experiment on serverless cron
+```
+$ fission function create --name hello --env nodejs --code hello.js
+$ fission route create --method GET --url /hello --function hello
+```

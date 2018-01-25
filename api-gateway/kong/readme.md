@@ -7,36 +7,25 @@
 ## Installation
 
 ```Bash
-$ docker run -d --name kong-database \
-  -p 5432:5432 \
-  -e "POSTGRES_USER=kong" \
-  -e "POSTGRES_DB=kong" \
-  postgres:9.6.1-alpine
-
-$ docker run -d --name kong \
-  --link kong-database:kong-database \
-  -e "KONG_DATABASE=postgres" \
-  -e "KONG_PG_HOST=kong-database" \
-  -p 8000:8000 \
-  -p 8443:8443 \
-  -p 8001:8001 \
-  -p 7946:7946 \
-  -p 7946:7946/udp \
-  kong:0.9.7
+$ docker-compose up -d
+$ # or
+$ ./bootstrap.sh
 
 $ curl http://127.0.0.1:8001 | python -m json.tool
 $ curl http://127.0.0.1:8001/status | python -m json.tool
+
+$ docker-compose exec kong kong health
 ```
 
-## Usage
+## [Usage](https://getkong.org/docs/0.12.x/getting-started/adding-your-api/)
 
 ```Bash
 $ # register upstream
 $ curl -i -X POST \
   --url http://localhost:8001/apis/ \
-  --data 'name=mockbin' \
-  --data 'upstream_url=http://mockbin.com/' \
-  --data 'request_host=mockbin.com'
+  --data 'name=ipify' \
+  --data 'upstream_url=https://api.ipify.org?format=json' \
+  --data 'request_host=ipify.org'
 ```
 
 ## Plugins

@@ -8,6 +8,9 @@ $ # install it on Mac OSX
 $ ./bootstrap.sh
 
 $ vault server -dev
+[ ... ]
+$ # save unseal key and root token in `.env`
+$ export VAULT_ADDR='http://127.0.0.1:8200l
 $ vault status
 Sealed: false
 Key Shares: 1
@@ -28,6 +31,10 @@ refresh_interval        2592000
 value                   world
 $ vault delete secret/hello
 Success! Deleted 'secret/hello' if it existed.
+
+$ # get help anytime
+$ vault path-help secret
+[ ... ]
 
 ```
 

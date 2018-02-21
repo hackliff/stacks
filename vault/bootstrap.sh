@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
 
+set -eo pipefail
+
 readonly PKG_URL="https://releases.hashicorp.com"
 readonly BIN_DIR="/usr/local/bin"
 readonly PKG_NAME="vault"
+readonly PKG_DEFAULT_VERSION="0.9.3"
+readonly CONSUL_DEFAULT_VERSION="1.0.6"
 
 install_vault() {
   local tmp_dest="/tmp/${PKG_NAME}.zip"
-  local pkg_version=${1:-"0.6.0"}
+  local pkg_version=${1:-"${PKG_DEFAULT_VERSION}"}
   # TODO automatic detection (uname -m ?)
   local bitsize="amd64"
   local platform="$(echo "$(uname)" | awk '{print tolower($0)}')_${bitsize}"
@@ -18,13 +22,17 @@ install_vault() {
     "${PKG_URL}/${PKG_NAME}/${pkg_version}/${PKG_NAME}_${pkg_version}_${platform}.zip"
   unzip -d ${BIN_DIR} ${tmp_dest}
 
+  vault --version
+  echo "installing autocompletino"
+  vault -autocomplete-install
+
   # clean up
   rm -rf ${tmp_dest}
 }
 
 install_consul() {
   local tmp_dest="/tmp/consul.zip"
-  local pkg_version=${1:-"0.6.4"}
+  local pkg_version=${1:-"${CONSUL_DEFAULT_VERSION}"}
   local bitsize="amd64"
   local platform="$(echo "$(uname)" | awk '{print tolower($0)}')_${bitsize}"
 

@@ -34,7 +34,7 @@ deployments.
 $ honcho start
 [ ... ]
 
-$ vault init
+$ vault operator init
 Unseal Key 1:
 540541ef32414ac80ba95f0be0c653749b49c887cbe3b51ccc7e404e1b72165c01
 Unseal Key 2:
@@ -77,7 +77,7 @@ token_policies: [root]
 
 ```Bash
 $ # mount backends
-$ vault auth-enable github
+$ vault auth enable -path=github github
 Successfully enabled 'github' at 'github'!
 $ # only accept users from the appturbo organization
 $ vault write auth/github/config organization=appturbo
@@ -105,7 +105,7 @@ Policy 'team' written.
 
 ```Bash
 $ # create token for interns
-$ vault token-create -policy="intern"
+$ vault token create -policy="intern"
 Key             Value
 ---             -----
 token           5e53f27a-59f3-f586-15aa-e18060ecfa49

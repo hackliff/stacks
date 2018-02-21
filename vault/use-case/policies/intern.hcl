@@ -1,7 +1,7 @@
 path "secret/preprod/*" {
-  policy = "read"
+  capabilities = ["read"]
 }
 
 path "secret/conf/*" {
-  policy = "write"
+  capabilities = ["create"]
 }

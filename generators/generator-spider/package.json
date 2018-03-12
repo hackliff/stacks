@@ -1,0 +1,16 @@
+{
+  "name": "generator-spider",
+  "version": "0.1.0",
+  "description": "create spider boilerplate",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Xavier Bruhiere <xavier.bruhiere@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^2.0.3"
+  }
+}

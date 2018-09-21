@@ -19,5 +19,8 @@
   - [Tensorflow](./tensorflow.md)
   - [RMarkdown](./rmarkdown.md)
 
+- Databases
+  - [Redis](./databases/redis/readme.md)
+
 - Notes
   - [Osquery](./osquery.md)

@@ -22,4 +22,5 @@ copy_content:
 	cp ./kafka/readme.md ./docs/kafka.md
 	cp ./tensorflow/readme.md ./docs/tensorflow.md
 	cp ./rmarkdown/readme.md ./docs/rmarkdown.md
+	cp ./zeit/readme.md ./docs/zeit.md
 

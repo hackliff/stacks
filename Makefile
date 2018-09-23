@@ -29,4 +29,4 @@ copy_content:
 	cp ./serverless/readme.md ./docs/serverless.md
 	cp ./serverless/fission/readme.md ./docs/fission.md
 	cp ./dask/readme.md ./docs/dask.md
-
+	cp ./aerospike/readme.md ./docs/aerospike.md

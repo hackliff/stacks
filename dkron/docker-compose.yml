@@ -1,0 +1,30 @@
+version: '2'
+
+# TODO a thrid service with webhooks support
+services:
+  old_etcd:
+    image: quay.io/coreos/etcd:v3.0.14
+
+  etcd:
+    image: microbox/etcd:latest
+    ports:
+      - '4001:4001'
+      - '2379:2379'
+      - '2380:2380'
+    volumes:
+      - ./etcd.data:/data
+    command: -name=dkron1
+
+  dkron:
+    depends_on:
+      - etcd
+    build:
+      context: './dkron'
+      args:
+        DKRON_VERSION: '0.9.1'
+    ports:
+      - '8080:8080'
+    links:
+      - etcd
+    entrypoint: sh
+    command: agent -server -backend=etcd -backend-machine=etcd:2379 -log-level=debug -join=dkron:8946

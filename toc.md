@@ -12,6 +12,7 @@
 - [Kafka](./kafka.md)
 - [Scala](./kafka.md)
 - [GraphQL](./graphql.md)
+- [Jenkins](./jenkins.md)
 
 - [Serverless](./serveless.md)
   - [Fission]('./fission.md')

@@ -30,3 +30,4 @@ copy_content:
 	cp ./serverless/fission/readme.md ./docs/fission.md
 	cp ./dask/readme.md ./docs/dask.md
 	cp ./aerospike/readme.md ./docs/aerospike.md
+	cp ./airpal/readme.md ./docs/airpal.md

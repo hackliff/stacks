@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  mysql:
+    image: mysql:5.7.13
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: airpal
+      MYSQL_USER: analyst
+      MYSQL_PASSWORD: secret
+
+  metabase:
+    image: metabase/metabase
+    ports:
+      - 3333:3000
+    links:
+      - mysql

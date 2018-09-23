@@ -1,0 +1,19 @@
+version: '2'
+
+# TODO volumes:
+  #- '$PWD/_es/config:/usr/share/elasticsearch/config'
+  #- '$PWD/_es/data:/usr/share/elasticsearch/data'
+services:
+  elasticsearch:
+    image: 'elasticsearch:5.1.2-alpine'
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+    #command: '-Des.node.name=TestNode'
+
+  kibana:
+    image: 'kibana:5.1.2'
+    ports:
+      - '5601:5601'
+    links:
+      - elasticsearch

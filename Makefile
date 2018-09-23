@@ -15,6 +15,7 @@ copy_content:
 	cp ./toc.md docs/README.md
 	cp ./writings.md ./docs
 	cp ./notes/*.md ./docs/
+	cp ./notes/node-async/readme.md ./docs/node-async.md
 	cp ./vault/readme.md ./docs/vault.md
 	cp ./flarum/readme.md ./docs/flarum.md
 	cp ./electron/readme.md ./docs/electron.md

@@ -3,7 +3,7 @@
 # unofficial strict mode
 set -eo pipefail
 
-BRANCH="$1"
+BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 
 git checkout master
 

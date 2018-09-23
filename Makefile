@@ -32,3 +32,5 @@ copy_content:
 	cp ./aerospike/readme.md ./docs/aerospike.md
 	cp ./airpal/readme.md ./docs/airpal.md
 	cp ./dkron/readme.md ./docs/dkron.md
+	cp ./elm/readme.md ./docs/elm.md
+

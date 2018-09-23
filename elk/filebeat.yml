@@ -1,0 +1,30 @@
+#https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-configuration-details.html
+
+filebeat:
+  prospectors:
+    - input_type: log
+      paths:
+        - "/var/log/*/*.log"
+      json.message_key: event
+      json.keys_under_root: true
+      fields:
+        planet: Magrathea
+      tags:
+        - testing
+        - tutorial
+        - json
+
+output:
+  elasticsearch:
+    hosts: ["elasticsearch:9200"]
+    template:
+      path: "/etc/filebeat/filebeat.template.json"
+
+logging:
+  to_syslog: false
+  to_files: true
+  files:
+    path: /var/log/filebeat/
+    name: filebeat_eslogs.log
+    rotateeverybytes: 10485760
+  level: info

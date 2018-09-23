@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+
+  mysql:
+    image: 'mysql:5.6'
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=analytics
+    ports:
+      - '3306:3306'
+
+  redis:
+    image: redis:3.0.3
+    ports:
+      - '6379:6379'
+
+  nginx:
+    build: .
+    ports:
+      - '8080:80'
+    volumes:
+      - '.:/app'
+    links:
+      - mysql
+      - redis

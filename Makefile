@@ -33,4 +33,5 @@ copy_content:
 	cp ./airpal/readme.md ./docs/airpal.md
 	cp ./dkron/readme.md ./docs/dkron.md
 	cp ./elm/readme.md ./docs/elm.md
-
+	cp ./graphql/readme.md ./docs/graphql.md
+#

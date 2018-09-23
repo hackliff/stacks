@@ -25,3 +25,5 @@
 
 - Learn
   - [Dask](./dask.md)
+
+- [GraphQL](./graphql.md)

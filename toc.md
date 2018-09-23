@@ -11,20 +11,18 @@
 - [GRPC](./grpc.md)
 - [Kafka](./kafka.md)
 - [Scala](./kafka.md)
+- [GraphQL](./graphql.md)
 
 - [Serverless](./serveless.md)
   - [Fission]('./fission.md')
 
 - Web
   - [Electron](./electron.md)
-<<<<<<< HEAD
   - [Zeit](./zeit.md)
 
 - DevOps
   - [Dkron](./drkon.md)
-=======
   - [Elm](./elm.md)
->>>>>>> 7f052ab... initial readmes
 
 - Data Science
   - [Tensorflow](./tensorflow.md)

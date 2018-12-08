@@ -1,0 +1,25 @@
+---
+name: test
+command: date >> /tmp/job.log
+shell: true
+epsilon: PT30M
+executor: ''
+executorFlags: ''
+retries: 2
+owner: tester@test.com
+ownerName: ''
+description: ''
+async: false
+cpus: 0.1
+disk: 256.0
+mem: 128.0
+softError: false
+dataProcessingJobType: false
+uris: []
+environmentVariables: []
+arguments: []
+highPriority: false
+runAsUser: root
+constraints: []
+schedule: R//PT5M
+scheduleTimeZone: ''
